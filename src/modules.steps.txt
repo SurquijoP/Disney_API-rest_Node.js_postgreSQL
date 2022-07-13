@@ -1,0 +1,16 @@
+Dev:
+-nodemon
+babel
+
+
+Production:
+express
+sequelize
+dotenv
+joi
+pg
+pghstore
+sequelize
+
+
+ipv adress: 172.20.0.2
