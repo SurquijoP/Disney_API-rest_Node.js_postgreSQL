@@ -1,0 +1,949 @@
+{
+	"info": {
+		"_postman_id": "def2e272-63a5-484f-b283-aded85184dbe",
+		"name": "DisneyDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Character",
+			"item": [
+				{
+					"name": "Get Character",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjY3MDMzfQ.oS-3k4zdptren5mEJdinbpUXWV2Do5RoiiVA-x6M-4k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/character/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"character",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "edad_min",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "edad_max",
+									"value": "200",
+									"disabled": true
+								},
+								{
+									"key": "peso_min",
+									"value": "50",
+									"disabled": true
+								},
+								{
+									"key": "peso_max",
+									"value": "3000",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Character by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NzY2NzE4MH0.-lmKTIVz7dwIbVqBu3-7HdOMBVN2yMkw3NKDbFe-DcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/character/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"character",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Character",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NzY0OTAzNH0.UlmWx4iy-ae-9bvGEEvrzshvJGgkZJVqFA1rwBE-YFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://static.wikia.nocookie.net/disney/images/a/a0/Ariel-1.png/revision/latest?cb=20170929163212&path-prefix=es\",\r\n        \"name\": \"Ariel\",\r\n        \"edad\": 16,\r\n        \"peso\": 60,\r\n        \"historia\": \"Ariel es una sirena muy bella y que tiene una voz encantadora, capaz de cautivar a cualquiera. Vive en el fondo del mar, donde tiene muchos amigos. Le encanta explorar barcos y tiene guardados todos sus tesoros en una cueva oculta a la dura mirada de su padre. Le apasiona el mundo de los humanos, pero hay una norma en el mundo bajo el mar: está totalmente prohibido el contacto con esos seres tan extraños.\",\r\n        \"serieId\": 4\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/character/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"character",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Character by Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   { \r\n    \"serieId\":2\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/character/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"character",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Character by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/API/v1/character/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"character",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Serie",
+			"item": [
+				{
+					"name": "Get Serie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjQ4MDU1fQ.uUITl9JPMFmjTiQgPpzreomnNiqlzoeOuzlcypo1-84",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "name",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "genderId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "ASC",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "DESC",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "adadwd",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Serie by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NTc3MjM5MDN9.QTCJZAbJN0rO0bC8CCCBqFkxYXe0VPiojq2T6m1cYYg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/\",\r\n        \"title\":\"Aereo Civil war\",\r\n        \"creation_date\":\"2000-01-26\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Serie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NzY0OTAzNH0.UlmWx4iy-ae-9bvGEEvrzshvJGgkZJVqFA1rwBE-YFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjMwMjg2fQ.Avx2wd-vN-vw0_Lv9l9lGCi-__fhGk0Z8v8Wab4Xz-o",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://static.wikia.nocookie.net/disney/images/a/a8/Little_mermaid_ver1_xlg.jpg/revision/latest/scale-to-width-down/1000?cb=20160923062202&path-prefix=es\",\r\n        \"title\":\"La sirenita\",\r\n        \"creation_date\":\"1991-01-30\",\r\n        \"qualification\": 5,\r\n        \"genderId\":2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Serie",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://www.aerocivil.gov.co/Style%20Library/CEA\",\r\n        \"creation_date\":\"2000-04-30\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Serie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Charater to serie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"characterId\":1,\r\n    \"serieId\":3\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/series/add-character",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"series",
+								"add-character"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gender",
+			"item": [
+				{
+					"name": "Get Gender",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NzY2NzE4MH0.-lmKTIVz7dwIbVqBu3-7HdOMBVN2yMkw3NKDbFe-DcM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/gender",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"gender"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get gender by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://www.aerocivil.gov.co/Style%20Library/CEA/img/\",\r\n        \"title\":\"Aereo Civil war\",\r\n        \"creation_date\":\"2000-01-26\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/gender/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"gender",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Gender",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY1NzY0OTAzNH0.UlmWx4iy-ae-9bvGEEvrzshvJGgkZJVqFA1rwBE-YFk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://portalhuaraz.com/wp-content/uploads/2020/09/novelas-ciencia-ficcion_1.jpg\",\r\n        \"name\":\"Ficcion\"   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/gender",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"gender"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Gender",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"image\": \"https://www.aerocivil.gov.co/Style%20Library/CEA\",\r\n        \"creation_date\":\"2000-04-30\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/gender",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"gender"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Gender",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/API/v1/gender",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"gender"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n        \r\n           \"role\":\"admin\"\r\n   }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {  \r\n           \"role\":\"admin\"\r\n   }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"email\":\"sebastianurquijo@hotmail.com\",\r\n    \"password\":\"panda1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/users/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"users",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n           \"email\":\"sebastianurquijo@hotmail.com\",\r\n           \"password\":\"panda1234\"\r\n   }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recovery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n           \"email\":\"sebastianurquijo@hotmail.com\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/API/v1/auth/recovery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"API",
+								"v1",
+								"auth",
+								"recovery"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
