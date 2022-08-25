@@ -36,6 +36,11 @@ Edita la cadena de conexión que se encuentra en el archivo
 .env 
 ``
 
+crea la bd con docker e inicializala.
+```
+docker-compose up
+```
+
 Levantar servidor en desarrollo con nodemon
 ```
 npm dev
